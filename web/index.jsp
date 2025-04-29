@@ -25,7 +25,7 @@
             <div class="mt-3 mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Descrição do projeto</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1"
-                          rows="3" style="resize: none;"></textarea>
+                          rows="4" style="resize: none;"></textarea>
             </div>
         </form>
         <button type="submit" class="btn btn-dark d-block mx-auto">Enviar</button>
@@ -36,7 +36,7 @@
 
             textarea.addEventListener('input', function () {
                 this.style.height = 'auto'; // reseta altura pra recalcular
-                const maxRows = 5;
+                const maxRows = 6;
                 const lineHeight = parseInt(window.getComputedStyle(this).lineHeight);
                 const scrollHeight = this.scrollHeight;
 

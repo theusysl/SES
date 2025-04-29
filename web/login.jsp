@@ -14,6 +14,9 @@
     </head>
     <body class="d-flex flex-column align-items-center justify-content-center min-vh-100">
         <%@include file="WEB-INF/jspf/header.jspf" %>
+        
+        <h1 class="display-1 mb-5">ABNGPT</h1>
+        
         <form>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email</label>

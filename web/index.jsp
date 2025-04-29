@@ -16,6 +16,7 @@
         <%@include file="WEB-INF/jspf/header.jspf" %>
         
         <h1 class="display-1 mb-5">ABNGPT</h1>
+        
         <div class="m-3 w-25">
         <form>
             <div class="mt-3 mb-3">

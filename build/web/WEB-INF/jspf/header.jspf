@@ -1,6 +1,6 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
-<nav class="navbar bg-body-tertiary fixed-top">
+<nav class="navbar fixed-top shadow-sm">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.jsp">
         <img src="images/logo_abngpt.png" alt="Logo" width="30" height="24">

@@ -14,38 +14,39 @@
     </head>
     <body class="d-flex flex-column align-items-center justify-content-center min-vh-100">
         <%@include file="WEB-INF/jspf/header.jspf" %>
-        
-        <h1 class="display-1 mb-5">ABNGPT</h1>
-        
-        <div class="m-3 w-25">
-        <form>
-            <div class="mt-3 mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Título do projeto</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1">
+        <div class="shadow-lg p-5 m-5 rounded-5" style="aspect-ratio: 3/4; max-width: 600px; height: 80vh;">
+            <h1 class="display-1 mb-5 text-center">ABNGPT</h1>
+
+            <div class="m-3 w-auto">
+            <form>
+                <div class="mt-3 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Título do projeto</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                </div>
+                <div class="mt-3 mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Descrição do projeto</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                              rows="4" style="resize: none;"></textarea>
+                </div>
+            </form>
+            <button type="submit" class="btn btn-dark d-block mx-auto">Enviar</button>
             </div>
-            <div class="mt-3 mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Descrição do projeto</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1"
-                          rows="4" style="resize: none;"></textarea>
-            </div>
-        </form>
-        <button type="submit" class="btn btn-dark d-block mx-auto">Enviar</button>
+
+            <script>
+                const textarea = document.getElementById('exampleFormControlTextarea1');
+
+                textarea.addEventListener('input', function () {
+                    this.style.height = 'auto'; // reseta altura pra recalcular
+                    const maxRows = 6;
+                    const lineHeight = parseInt(window.getComputedStyle(this).lineHeight);
+                    const scrollHeight = this.scrollHeight;
+
+                    const maxHeight = lineHeight * maxRows;
+
+                    this.style.height = Math.min(scrollHeight, maxHeight) + 'px';
+                });
+            </script>
         </div>
-
-        <script>
-            const textarea = document.getElementById('exampleFormControlTextarea1');
-
-            textarea.addEventListener('input', function () {
-                this.style.height = 'auto'; // reseta altura pra recalcular
-                const maxRows = 6;
-                const lineHeight = parseInt(window.getComputedStyle(this).lineHeight);
-                const scrollHeight = this.scrollHeight;
-
-                const maxHeight = lineHeight * maxRows;
-
-                this.style.height = Math.min(scrollHeight, maxHeight) + 'px';
-            });
-        </script>
 
         <%@include file="WEB-INF/jspf/html_body_libs.jspf" %>
     </body>

@@ -14,24 +14,25 @@
     </head>
     <body class="d-flex flex-column align-items-center justify-content-center min-vh-100">
         <%@include file="WEB-INF/jspf/header.jspf" %>
-        
-        <h1 class="display-1 mb-5">ABNGPT</h1>
-        
-        <form>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">Não iremos compartilhar seu email com ninguém.</div>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Lembrar de mim</label>
-          </div>
-          <button type="submit" class="btn btn-dark">Login</button>
-        </form>
+        <div class="shadow-lg p-5 m-5 rounded-5" style="aspect-ratio: 3/4; max-width: 600px; height: 80vh;">
+            <h1 class="display-1 mb-5 text-center">ABNGPT</h1>
+
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Não iremos compartilhar seu email com ninguém.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Lembrar de mim</label>
+              </div>
+              <button type="submit" class="btn btn-dark">Login</button>
+            </form>
+        </div>
     </body>
 </html>

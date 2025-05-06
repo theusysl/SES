@@ -10,6 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>ABNGPT</title>
+        <link rel="icon" type="image/x-icon" href="images/logo_abngpt.png">
         <%@include file="WEB-INF/jspf/html_head_libs.jspf" %>
     </head>
     <body class="d-flex flex-column align-items-center justify-content-center min-vh-100">

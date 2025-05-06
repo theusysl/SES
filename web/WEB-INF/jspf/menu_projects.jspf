@@ -1,0 +1,63 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<script>
+    async function request(url = "", methd, data) {
+        const response = await fetch(url, {
+            method: methd,
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(data)
+        });
+        return response.json();
+    }
+
+    function projetos() {
+        return {
+            newProjetoTitle: "",
+            list: [],
+            async loadProjetos() {
+                request("/SES/projetos", "GET").then((data) => {
+                    this.list = data.list;
+                });
+            }, addProjeto() {
+                request("/SES/projetos", "POST", {title: this.newProjetoTitle}).then((data) => {
+                    this.newProjetoTitle = "";
+                    this.list = data.list;
+                });
+            }, async removeProjeto(ProjetoTitle) {
+                request("/SES/projetos?title=" + ProjetoTitle, "DELETE").then((data) => {
+                    this.list = data.list;
+                });
+            }
+        }
+    }
+</script>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Projetos</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="container-fluid m-2" x-data="projetos()" x-init="loadProjetos()">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" x-model="newProjetoTitle" placeholder="Novo projeto">
+                <button class="btn btn-primary" type="button" x-on:click="addProjeto()">+</button>
+            </div>
+
+            <table class="table">
+                <template x-for="projeto in list">
+                    <tr>
+                        <td>
+                            <button type="button" x-on:click="removeProjeto(task.title)" class="btn-close btn-sm" aria-label="Close"></button>
+                            <span x-text="projeto.title"></span>
+                        </td>
+                    </tr>
+                </template>
+            </table>
+        </div>
+    </div>
+</div>

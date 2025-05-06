@@ -1,9 +1,10 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
-<nav class="navbar fixed-top shadow-sm">
+<nav class="navbar fixed-top nav-fill shadow-sm">
   <div class="container-fluid">
+    <%@include file="menu_projects.jspf" %>
     <a class="navbar-brand" href="index.jsp">
-        <img src="images/logo_abngpt.png" alt="Logo" width="30" height="24">
+      <img src="images/logo_abngpt.png" alt="Logo" width="30" height="30">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

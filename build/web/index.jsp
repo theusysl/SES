@@ -18,11 +18,11 @@
         <div class="shadow-lg p-5 m-5 rounded-5" style="aspect-ratio: 3/4; max-width: 600px; height: 80vh;">
             <%@include file="WEB-INF/jspf/abngpt_display.jspf" %>
 
-            <div class="m-3 w-auto">
+            <div class="m-3 w-auto" x-data="projetos()" x-init="loadProjetos()">
             <form>
                 <div class="mt-3 mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Título do projeto</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" x-model="newProjetoTitle">
                 </div>
                 <div class="mt-3 mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Descrição do projeto</label>
@@ -41,9 +41,9 @@
                 <div id="outroProjetoContainer" class="mt-3 mb-3" style="display: none;">
                     <label for="outroProjetoInput" class="form-label">Descreva o tipo de projeto</label>
                     <input type="text" class="form-control" id="outroProjetoInput" name="outroProjeto" placeholder="Digite aqui...">
-                </div>                
+                </div>
             </form>
-            <button type="submit" class="btn btn-dark d-block mx-auto">Enviar</button>
+            <button type="button" class="btn btn-dark d-block mx-auto" x-on:click="addProjeto()">Enviar</button>
             </div>
 
             
@@ -51,36 +51,23 @@
 
         <%@include file="WEB-INF/jspf/html_body_libs.jspf" %>
     </body>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const select = document.getElementById('exampleFormSelect1');
-            const outroContainer = document.getElementById('outroProjetoContainer');
-    
-            select.addEventListener('change', function () {
-                if (this.value === 'outro') {
-                    outroContainer.style.display = 'block';
-                } else {
-                    outroContainer.style.display = 'none';
-                }
-            });
-        });
-
+    <script> // script pra descrição aumentar até 6 linhas de tamanho e adicionar o scroll quando o texto exceder o tamanho da area
         const textarea = document.getElementById('exampleFormControlTextarea1');
-    
+        
         textarea.addEventListener('input', function () {
             this.style.height = 'auto';
-    
+
             const maxRows = 6;
             const lineHeight = parseInt(window.getComputedStyle(this).lineHeight);
             const paddingTop = parseInt(window.getComputedStyle(this).paddingTop);
             const paddingBottom = parseInt(window.getComputedStyle(this).paddingBottom);
-    
+
             const maxHeight = (lineHeight * maxRows) + paddingTop + paddingBottom;
             const scrollHeight = this.scrollHeight;
-    
+
             // ajusta a altura até o limite
             this.style.height = Math.min(scrollHeight, maxHeight) + 'px';
-    
+
             // só mostra scroll se passar das 6 linhas
             if (scrollHeight > maxHeight) {
                 this.style.overflowY = 'auto';

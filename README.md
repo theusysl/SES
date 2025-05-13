@@ -1,41 +1,58 @@
-# ABNGPT
-📝 Projeto de Transformação de Trabalhos Acadêmicos para Normas ABNT 💼
+# AIBOOK  
+📚 Geração Inteligente de Ebooks Personalizados com IA ✨  
 
-Este é um programa desenvolvido para facilitar a vida de estudantes, professores e pesquisadores, automatizando a transformação de trabalhos acadêmicos para as normas da ABNT (Associação Brasileira de Normas Técnicas). O objetivo é criar um ambiente eficiente, intuitivo e inteligente para a formatação de trabalhos acadêmicos de acordo com as regras exigidas pelas universidades.
+AIBOOK é uma plataforma inovadora que permite a criação de **ebooks personalizados** a partir de parâmetros fornecidos pelo usuário. Utilizando inteligência artificial, o sistema gera livros digitais completos com estrutura coerente, capítulos bem definidos, sumário, capa e estilo textual ajustado ao público-alvo.
 
-🔐 Cadastro e Login de Usuário 🔐
+Nosso objetivo é democratizar a produção de conteúdo, tornando o processo de criação de ebooks tão simples quanto preencher um formulário.
 
-O sistema contará com um cadastro e login para garantir que usuários cadastrados salvem seus trabalhos. A tela de cadastro vai permitir aos usuários criarem suas contas de forma rápida e segura, enquanto o login possibilita o acesso ao sistema com base nas credenciais cadastradas.
+---
 
-🟢 Cadastro: Criação de conta com dados básicos (nome, e-mail, senha).
+## 🔐 Cadastro e Login de Usuário
 
-🟢 Login: Acesso com autenticação de usuário.
+O sistema oferece autenticação segura para que os usuários possam **criar, salvar e gerenciar** seus ebooks diretamente pela plataforma.
 
-🚀 Descrição do Trabalho ✍️
+- 🟢 **Cadastro:** Criação de conta com nome, e-mail e senha.  
+- 🟢 **Login:** Acesso rápido com verificação de credenciais.
 
-Após o login, o usuário será direcionado a uma área onde poderá descrever o conteúdo do seu trabalho acadêmico. Nessa aba, será possível informar detalhes como o título do trabalho, tipo de trabalho (TCC, artigo, dissertação, etc.), objetivo, introdução e outras informações relevantes.
+---
 
-🟢 Campos de Preenchimento: Título, Resumo, Palavras-chave, Objetivos, etc.
+## ✍️ Parâmetros de Geração do Ebook
 
-🟢 Interface Intuitiva: Formulário simples e direto para descrever o trabalho acadêmico.
+Após o login, o usuário é direcionado a um formulário onde pode configurar todos os detalhes do ebook que deseja criar.
 
-🤖 Transformação para as Normas ABNT.
+- 🟢 **Campos de Preenchimento:** Título, tema, público-alvo, número de capítulos, estilo de escrita, tom de voz, etc.  
+- 🟢 **Interface Intuitiva:** Design simples para facilitar a definição do conteúdo.
 
-O uso de Inteligência Artificial (IA) para transformar o conteúdo fornecido pelo usuário em um formato adequado às normas da ABNT. Isso inclui formatação de citações, referências, margens, fontes e até mesmo o sumário automático!
+---
 
-🟢 Citações e Referências: A IA ajusta automaticamente as citações e cria a lista de referências conforme as normas.
+## 🤖 Geração Automática com Inteligência Artificial
 
-🟢 Formatação Completa: Margens, fonte, espaçamento, e elementos como capa e folha de rosto são ajustados automaticamente.
+A partir das informações fornecidas, o sistema utiliza IA para **gerar o conteúdo completo do ebook**, estruturado com início, meio e fim, respeitando o estilo desejado pelo usuário.
 
-🟢 Sumário Automático: O sistema gera um sumário com base nas seções do trabalho.
+- 🟢 **Capítulos Coerentes:** A IA cria uma narrativa fluida com base na estrutura definida.  
+- 🟢 **Sumário Dinâmico:** Gerado automaticamente com base na divisão de tópicos.  
+- 🟢 **Capa Personalizada:** Criação de capa simples com título e autor.
 
-💻 Interface de Usuário Prática.
+---
 
-A interface foi projetada para ser simples e objetiva, com foco na experiência do usuário. Além disso, o sistema será responsivo.
+## 📤 Exportação em Diversos Formatos
 
-🟢 Design Clean e Funcional: Foco em usabilidade fácil e intuitiva.
+Depois da geração, o ebook pode ser **exportado em PDF ou EPUB**, pronto para ser lido em qualquer dispositivo ou publicado em plataformas de leitura digital.
 
-🎯 Objetivo Final 
+- 🟢 **Preview:** Visualização do conteúdo antes da exportação.  
+- 🟢 **Download Rápido:** Em formatos compatíveis com e-readers e editores de texto.
 
-Nosso objetivo é entregar uma ferramenta eficiente e acessível, que torne a formatação de trabalhos acadêmicos um processo rápido e sem complicação, garantindo que os usuários sigam todas as exigências da ABNT sem precisar se preocupar com a parte burocrática.
+---
 
+## 💻 Interface Amigável
+
+Criamos uma interface moderna e responsiva para garantir uma experiência de uso fluida em qualquer dispositivo.
+
+- 🟢 **Design Clean:** Foco na usabilidade e simplicidade.  
+- 🟢 **Acessível:** Funciona bem tanto em desktops quanto em celulares.
+
+---
+
+## 🎯 Objetivo Final
+
+Nosso propósito com o AIBOOK é permitir que **qualquer pessoa consiga transformar uma ideia em um ebook completo**, com apenas alguns cliques. Seja para autores iniciantes, educadores, empresas ou criadores de conteúdo, o AIBOOK elimina as barreiras técnicas da escrita e da formatação.

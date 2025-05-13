@@ -30,5 +30,7 @@
             <button type="submit" class="btn btn-dark">Cadastre-se</button>
           </form>
         </div>
+          
+        <%@include file="WEB-INF/jspf/html_body_libs.jspf" %>
     </body>
 </html>

@@ -10,7 +10,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>AIBOOK</title>
-        <link rel="icon" type="image/x-icon" href="images/logo_aibook.png">
         <%@include file="WEB-INF/jspf/html_head_libs.jspf" %>
     </head>
     <body class="d-flex flex-column align-items-center justify-content-center min-vh-100">
@@ -40,12 +39,8 @@
                         <option value="outro">Outros</option>
                     </select>
                 </div>
-                <div id="outroProjetoContainer" class="mt-3 mb-3" style="display: none;">
-                    <label for="outroProjetoInput" class="form-label">Descreva o tipo de Ebook</label>
-                    <input type="text" class="form-control" id="outroProjetoInput" name="outroProjeto" placeholder="Digite aqui...">
-                </div>
             </form>
-            <button type="button" class="btn btn-dark d-block mx-auto" x-on:click="addProjeto()">Enviar</button>
+            <button type="button" class="btn btn-dark d-block mx-auto" x-on:click="addProjeto()">Gerar Ebook</button>
             </div>
 
             

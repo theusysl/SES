@@ -15,7 +15,7 @@
     <body class="d-flex flex-column align-items-center justify-content-center min-vh-100">
         <%@include file="WEB-INF/jspf/header.jspf" %>
         <div class="shadow-lg p-5 m-5 rounded-5" style="aspect-ratio: 3/4; max-width: 450px; height: auto;">
-          <%@include file="WEB-INF/jspf/abngpt_display.jspf" %>
+          <%@include file="WEB-INF/jspf/aibook_display.jspf" %>
 
           <form>
             <div class="form-floating mb-3">

@@ -9,14 +9,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>ABNGPT</title>
-        <link rel="icon" type="image/x-icon" href="images/logo_abngpt.png">
+        <title>AIBOOK</title>
+        <link rel="icon" type="image/x-icon" href="images/logo_aibook.png">
         <%@include file="WEB-INF/jspf/html_head_libs.jspf" %>
     </head>
     <body class="d-flex flex-column align-items-center justify-content-center min-vh-100">
         <%@include file="WEB-INF/jspf/header.jspf" %>
         <div class="shadow-lg p-5 m-5 rounded-5" style="aspect-ratio: 3/4; max-width: 600px; height: 80vh;">
-            <%@include file="WEB-INF/jspf/abngpt_display.jspf" %>
+            <%@include file="WEB-INF/jspf/aibook_display.jspf" %>
 
             <div class="m-3 w-auto" x-data="projetos()" x-init="loadProjetos()">
             <form>

@@ -21,25 +21,27 @@
             <div class="m-3 w-auto" x-data="projetos()" x-init="loadProjetos()">
             <form>
                 <div class="mt-3 mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Título do projeto</label>
+                    <label for="exampleFormControlInput1" class="form-label">Título do Ebook</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" x-model="newProjetoTitle">
                 </div>
                 <div class="mt-3 mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Descrição do projeto</label>
+                    <label for="exampleFormControlTextarea1" class="form-label">Descrição do Ebook</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1"
                               rows="4" style="resize: none;"></textarea>
                 </div>
                 <div class="mt-3 mb-3">
-                    <label for="exampleFormSelect1" class="form-label">Tipo de projeto</label>
+                    <label for="exampleFormSelect1" class="form-label">Tipo de Ebook</label>
                     <select class="form-select" aria-label="Default select example">
-                        <option value="1">TCC</option>
-                        <option value="2">Artigo</option>
-                        <option value="3">Dissertação</option>
-                        <option value="outro">Outro</option>
+                        <option value="1">Guia ou Manual</option>
+                        <option value="2">Estudo de Caso</option>
+                        <option value="3">Compilados de artigos</option>
+                        <option value="4">Atividades e exercícios</option>
+                        <option value="5">WorkBook</option>
+                        <option value="outro">Outros</option>
                     </select>
                 </div>
                 <div id="outroProjetoContainer" class="mt-3 mb-3" style="display: none;">
-                    <label for="outroProjetoInput" class="form-label">Descreva o tipo de projeto</label>
+                    <label for="outroProjetoInput" class="form-label">Descreva o tipo de Ebook</label>
                     <input type="text" class="form-control" id="outroProjetoInput" name="outroProjeto" placeholder="Digite aqui...">
                 </div>
             </form>

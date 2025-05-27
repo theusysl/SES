@@ -8,14 +8,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>ABNGPT</title>
         <%@include file="WEB-INF/jspf/html_head_libs.jspf" %>
     </head>
     <body class="d-flex flex-column align-items-center justify-content-center min-vh-100">
         <%@include file="WEB-INF/jspf/header.jspf" %>
         <div class="shadow-lg p-5 m-5 rounded-5" style="aspect-ratio: 3/4; max-width: 450px; height: auto;">
-          <%@include file="WEB-INF/jspf/aibook_display.jspf" %>
 
           <form>
             <div class="form-floating mb-3">

@@ -2,7 +2,7 @@
 <%@ page pageEncoding="UTF-8" %>
 <nav class="navbar fixed-top nav-fill shadow-sm">
   <div class="container-fluid">
-    <%@include file="menu_projects.jspf" %>
+    <%@include file="menu.jspf" %>
     <a class="navbar-brand" href="index.jsp">
       <img src="assets/icons/logo_aibook.png" alt="Logo" width="30" height="30">
     </a>

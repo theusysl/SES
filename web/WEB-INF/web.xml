@@ -6,7 +6,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>CompletionServlet</servlet-name>
-        <url-pattern>/CompletionServlet</url-pattern>
+        <url-pattern>/completion</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

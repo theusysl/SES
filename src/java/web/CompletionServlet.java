@@ -28,21 +28,18 @@ public class CompletionServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("application/json;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            if(request.getParameter("prompt")!=null){
-                try{
-                    String prompt = "gere o enunciado de um execício simples de lógica de programação";
-                    JSONObject data= new JSONObject();
-                    data.put("model", "Gemini");
-                    data.put("response", Gemini.getCompletion(prompt));
-                    out.print(data.toString());
-                }catch(Exception ex){
-                    out.print(new JSONObject("error", ex.getMessage()).toString());
-                }
-            }
+        response.setContentType("application/json;charset=UTF-8"); // <-- AQUI Ó
+        try {
+            String prompt = "gera um enunciado simples de exercicio de logica de programacao";
+            String resposta = Gemini.getCompletion(prompt);
+            request.setAttribute("resposta", resposta);
+            request.getRequestDispatcher("index.jsp").forward(request, response);
+        } catch (Exception ex) {
+            request.setAttribute("erro", ex.getMessage());
+            request.getRequestDispatcher("index.jsp").forward(request, response);
         }
     }
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

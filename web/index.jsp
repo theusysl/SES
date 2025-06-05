@@ -31,13 +31,14 @@
                     <div class="card shadow rounded-4 border-0 h-100">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Exercício</h5>
-                            <% if(request.getAttribute("error") != null) { %>
-                            <p>ERRO: <%= request.getAttribute("error") %></p>
-                            <% } else if(request.getAttribute("completion") != null) { %>
-                            <div><%= request.getAttribute("completion") %></div>
+
+                            <% if (request.getAttribute("resposta") != null) { %>
+                            <div class="mt-3"><%= request.getAttribute("resposta") %></div>
+                            <% } else if (request.getAttribute("erro") != null) { %>
+                            <div class="mt-3 text-danger">ERRO: <%= request.getAttribute("erro") %></div>
                             <% } %>
 
-                            <input class="btn btn-dark mt-auto" type="submit" name="invoke" value="Enviar"/>
+                            <a href="completion" class="btn btn-dark mt-auto">Gerar</a>
 
                         </div>
                     </div>
@@ -47,9 +48,11 @@
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Solução</h5>
                             <p class="card-text">Digite seu código aqui.</p>
-                            <div class="form-floating flex-grow-1">
-                                <textarea class="form-control h-100" placeholder="Leave a comment here" style="resize: none;"></textarea>
+                            <div class="form-floating flex-grow-1 mb-3">
+                                <textarea id="editor" class="form-control" style="display: none;"></textarea>
+                                <div id="editor-container" style="height: 100%; border-radius: 12px; overflow: hidden;"></div>
                             </div>
+                            <a href="completion" class="btn btn-dark mt-auto">Gerar</a>
                         </div>
                     </div>
                 </div>

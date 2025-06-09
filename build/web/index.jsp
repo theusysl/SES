@@ -3,11 +3,23 @@
     Created on : 29 de abr. de 2025, 11:33:28
     Author     : Matheus
 --%>
-<%@page import="ai.Gemini"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="ai.Gemini"%>
+<%@ page import="model.Usuario" %>
+
 <!DOCTYPE html>
 
 <%
+    // verificar usuario logado
+    Usuario userLogado = (Usuario) session.getAttribute("usuario");
+    
+    // se nao tiver logado joga pra tela de login
+    if (session.getAttribute("usuario") == null) {
+        response.sendRedirect("login.jsp");
+        return;
+    }
+    
+    // ia
     if(request.getParameter("invoke")!=null){
         try{
             String prompt = request.getParameter("prompt");

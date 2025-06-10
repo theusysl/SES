@@ -13,7 +13,7 @@ import org.json.JSONObject;
  */
 public class Gemini {
 
-    private static final String API_KEY = "AIzaSyArqhrtRAlb_CjAx8N8ffyRMQM9OpjBvd8";
+    private static final String API_KEY = "";
 
     public static String getCompletion(String prompt) throws Exception {
         System.out.println("DEBUG PROMPT >>> " + prompt);

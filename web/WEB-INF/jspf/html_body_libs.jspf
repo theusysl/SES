@@ -1,7 +1,7 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-<!-- code mirror -->
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const textarea = document.getElementById("editor");
@@ -11,7 +11,7 @@
         }, {
             value: textarea.value,
             mode: "text/x-java",
-            theme: "material-darker",
+            theme: "dracula",
             lineNumbers: true,
             lineWrapping: true,
             tabSize: 4,
@@ -36,9 +36,10 @@
             }
         });
 
-        // se for usar form depois
-        document.querySelector("form")?.addEventListener("submit", function () {
-            textarea.value = editor.getValue();
+        // passar o codigo como form
+        document.querySelector('form').addEventListener('submit', function (e) {
+            const code = editor.getValue(); // depende do editor que vc tá usando (tipo ace ou monaco)
+            document.getElementById('codigo-hidden').value = code;
         });
     });
 </script>

@@ -1,8 +1,12 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
+<%@page import="model.Usuario" %>
+
+<!DOCTYPE html>
+    
 <nav class="navbar fixed-top nav-fill shadow-sm">
   <div class="container-fluid">
-    <%@include file="menu.jspf" %>
+    <%@include file="exercicios.jspf"%>
     <a class="navbar-brand" href="index.jsp">
       <img src="assets/icons/logo_aibook.png" alt="Logo" width="30" height="30">
     </a>

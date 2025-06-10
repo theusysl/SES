@@ -8,9 +8,12 @@
         <servlet-name>CompletionServlet</servlet-name>
         <url-pattern>/completion</url-pattern>
     </servlet-mapping>
-    <session-config>
-        <session-timeout>
-            30
-        </session-timeout>
-    </session-config>
+    <servlet>
+        <servlet-name>SalvarExercicioServlet</servlet-name>
+        <servlet-class>web.SalvarExercicioServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SalvarExercicioServlet</servlet-name>
+        <url-pattern>/salvar-exercicio</url-pattern>
+    </servlet-mapping>
 </web-app>

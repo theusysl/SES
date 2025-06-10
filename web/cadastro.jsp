@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ page import="model.Usuario" %>
+<%@page import="model.Usuario" %>
 <%
     Usuario userLogado = (Usuario) session.getAttribute("usuario");
 %>
@@ -38,7 +38,7 @@
           </form>
                 
           <% if (request.getAttribute("erro") != null) { %>
-              <div class="alert alert-danger"><%= request.getAttribute("erro") %></div>
+              <div class="alert alert-danger mt-4"><%= request.getAttribute("erro") %></div>
           <% } %>
         </div>
           
